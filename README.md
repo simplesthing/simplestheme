@@ -1,0 +1,2 @@
+# simplestheme
+Angular WordPress theme
