@@ -1,0 +1,19 @@
+{
+  "name": "simplestheme",
+  "version": "1.0.0",
+  "description": "Angular Wordpress theme that uses the JSON API plugin",
+  "main": "scripts/app/simplestheme.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-embedlr": "^0.5.2",
+    "gulp-livereload": "^3.8.0",
+    "gulp-sass": "^1.3.3",
+    "gulp-sourcemaps": "^1.5.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ava Collins",
+  "license": "ISC"
+}

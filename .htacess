@@ -1,0 +1,15 @@
+<ifModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    #for crawlers to redirect to static page
+    #http://jes.al/2013/06/optimizing-angularjs-driven-website-for-seo/
+    RewriteCond %{QUERY_STRING} ^_escaped_fragment_=(.*)$
+	RewriteRule ^$ /crawler.php$1 [QSA,L]
+
+    # Required to allow direct-linking of pages so they can be processed by Angular
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)  /index.php/#/$1
+
+</ifModule>

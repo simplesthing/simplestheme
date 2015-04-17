@@ -1,0 +1,6 @@
+<h1>HOME</h1>
+<ul>
+	<li ng-repeat="post in posts">
+		<a ui-sref="test({slug:post.slug})">{{post.title}}</a>
+	</li>
+</ul>

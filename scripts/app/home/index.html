@@ -1,0 +1,5 @@
+<section id="home">
+	<ul>
+	<li ng-repeat="post in posts track by $index"><a ui-sref="post({slug:post.slug})">{{post.title}}</a></li>
+	</ul>
+</section>
