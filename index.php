@@ -18,6 +18,7 @@
   	<script src="wp-content/themes/simplestheme/vendor/lodash.js"></script>
   	<script src="wp-content/themes/simplestheme/vendor/ui-bootstrap-tpls.js"></script>
   	<script src="wp-content/themes/simplestheme/app/app.js"></script>
+  	<script src="wp-content/themes/simplestheme/app/filters/date.js"></script>
   	<script src="wp-content/themes/simplestheme/app/filters/strip-html-tags.js"></script>
   	<script src="wp-content/themes/simplestheme/app/services/post.js"></script>
   	<script src="wp-content/themes/simplestheme/app/services/posts.js"></script>

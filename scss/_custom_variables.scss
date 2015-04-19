@@ -38,8 +38,10 @@ a {
 // // Brand colors
 // // -------------------------
 $almost-black: #404333;
+$almost-black-10: lighten($almost-black, 10%);
+$almost-black-33: lighten($almost-black, 33%);
 $almost-white: #fcfcfc;
-$brand-primary:         #1F1F1F !default;
+$brand-primary:         $almost-black !default;
 // $brand-success:         #5cb85c !default;
 // $brand-warning:         #f0ad4e !default;
 // $brand-danger:          #d9534f !default;
@@ -54,7 +56,7 @@ $text-color:            $brand-primary !default;
 // // Links
 // // -------------------------
 
-$link-color:            $brand-primary !default;
+$link-color:            $almost-black !default;
 $link-hover-color:      #F714D9 !default;
 
 // // Typography

@@ -6,6 +6,11 @@
 	// background: $link-hover-color;
 }
 
+em {
+	font-family: $lora;
+	color: $almost-black-10;
+}
+
 header {
 	resize:vertical;
 	overflow: auto;

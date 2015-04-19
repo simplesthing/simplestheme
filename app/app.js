@@ -3,7 +3,8 @@
 
 angular.module('simplestheme', [
 	'ui.router',
-	'htmlFilters'
+	'htmlFilters',
+	'dateFilters'
 ])
 .value('_', window.lodash)
 .config(['$stateProvider','$urlRouterProvider', '$locationProvider',
@@ -14,7 +15,7 @@ angular.module('simplestheme', [
 			url: '/',
 			views: {
 				'main' : {
-					templateUrl: 'wp-content/themes/simplestheme/app/theme/home/index.html',
+					templateUrl: 'wp-content/themes/simplestheme/app/theme/home/home.html',
 					controller: 'HomeController',
 					controllerAs: 'home'
 
