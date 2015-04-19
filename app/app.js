@@ -2,7 +2,8 @@
 	'use strict'
 
 angular.module('simplestheme', [
-	'ui.router'
+	'ui.router',
+	'htmlFilters'
 ])
 .value('_', window.lodash)
 .config(['$stateProvider','$urlRouterProvider', '$locationProvider',
@@ -27,20 +28,17 @@ angular.module('simplestheme', [
 			url: '/:slug',
 			views: {
 				'main' : {
-					templateUrl: 'wp-content/themes/simplestheme/app/theme/wpost/index.html',
-					controller: 'slug',
-					controllerAs: 'slug'
+					templateUrl: 'wp-content/themes/simplestheme/app/theme/post/index.html',
+					controller: 'PostController',
+					controllerAs: 'single'
+				},
+				'hero': {
+					templateUrl: 'wp-content/themes/simplestheme/app/theme/post/hero.html',
+					controller: 'PostController',
+					controllerAs: 'single'
 				}
 			}
 		});
 		// $locationProvider.html5Mode({enabled: true, requireBase: false});
 }])
-.controller('slug', [ '$scope', '$http', '$stateParams', '_',
-	function($scope, $http, $stateParams){
-		$http.get('/api/get_post/?slug='+ $stateParams.slug).success(function(response){
-			console.log(response)
-			$scope.post = response.post;
-		});
-	}]
-);
 })(window, window.angular); 

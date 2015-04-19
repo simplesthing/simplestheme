@@ -19,8 +19,10 @@
   	<script src="wp-content/themes/simplestheme/vendor/ui-bootstrap-tpls.js"></script>
   	<script src="wp-content/themes/simplestheme/app/app.js"></script>
   	<script src="wp-content/themes/simplestheme/app/filters/strip-html-tags.js"></script>
+  	<script src="wp-content/themes/simplestheme/app/services/post.js"></script>
   	<script src="wp-content/themes/simplestheme/app/services/posts.js"></script>
   	<script src="wp-content/themes/simplestheme/app/theme/home/home-controller.js"></script>
+  	<script src="wp-content/themes/simplestheme/app/theme/post/post-controller.js"></script>
   	<!-- endinject -->
 </head>
 <body >
