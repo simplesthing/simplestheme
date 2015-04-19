@@ -66,7 +66,7 @@ gulp.task('sass', function() {
 // Watch
 gulp.task('watch', function() {
 	livereload.listen();
-	gulp.watch('./scss/{,*/}*.{scss,sass}', ['sass']);
+	gulp.watch(['./scss/{,*/}*.{scss,sass}', './app/**/*.scss'], ['sass']);
 });
 
 // Gulp Default Task

@@ -23,10 +23,11 @@
   	<script src="wp-content/themes/simplestheme/app/services/posts.js"></script>
   	<script src="wp-content/themes/simplestheme/app/theme/home/home-controller.js"></script>
   	<script src="wp-content/themes/simplestheme/app/theme/post/post-controller.js"></script>
+  	<script src="wp-content/themes/simplestheme/app/theme-controller.js"></script>
   	<!-- endinject -->
 </head>
-<body >
-	<header>
+<body ng-controller="AppController as theme">
+	<header ng-attr-style="{{theme.bgStyle}}">
 		<nav class="navbar navbar-default">
 		  <div class="container-fluid">
 		    <!-- Brand and toggle get grouped for better mobile display -->
@@ -37,7 +38,7 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <a class="navbar-brand logo" href="/"><?php bloginfo( 'name' ); ?></a>
+		      <a class="navbar-brand logo" ui-sref="home"><?php bloginfo( 'name' ); ?></a>
 		    </div>
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

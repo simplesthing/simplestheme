@@ -1,9 +1,9 @@
 (function (window, angular, undefined) {
 	angular.module('simplestheme')
-	.factory('postsModel', function($http){
+	.service('PostsModel', function($http){
 		return {
 			get: function(){
-				return $http.get('/api/get_posts');
+				return $http.get('/api/get_posts', {cache: true});
 			}
 		}
 	})

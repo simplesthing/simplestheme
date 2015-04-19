@@ -3,7 +3,7 @@
 	.factory('postModel', function($http){
 		return {
 			get: function(post){
-				return $http.get('/api/get_post/?slug=' + post);
+				return $http.get('/api/get_post/?slug=' + post, {cache:true});
 			}
 		}
 	})

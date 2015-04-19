@@ -20,7 +20,9 @@ angular.module('simplestheme', [
 
 				},
 				'hero': {
-					templateUrl: 'wp-content/themes/simplestheme/app/theme/home/hero.html'
+					templateUrl: 'wp-content/themes/simplestheme/app/theme/hero/hero.html',
+					controller: 'HomeController',
+					controllerAs: 'ctrl'
 				}
 			}
 		})
@@ -33,9 +35,9 @@ angular.module('simplestheme', [
 					controllerAs: 'single'
 				},
 				'hero': {
-					templateUrl: 'wp-content/themes/simplestheme/app/theme/post/hero.html',
+					templateUrl: 'wp-content/themes/simplestheme/app/theme/hero/hero.html',
 					controller: 'PostController',
-					controllerAs: 'single'
+					controllerAs: 'ctrl'
 				}
 			}
 		});

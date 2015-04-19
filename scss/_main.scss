@@ -2,10 +2,13 @@
 	@extend .one-col;
 }
 
-header {
-	background: $almost-black url('../images/hawk.jpg') no-repeat center center;
-	background-size: cover;
+::-webkit-resizer {
+	// background: $link-hover-color;
+}
 
+header {
+	resize:vertical;
+	overflow: auto;
 	.logo {
 	  font-family: $sansita;
 	  font-size:2.25em;
@@ -24,29 +27,5 @@ header {
 		letter-spacing: .05em;
 		text-transform: uppercase;
 		text-shadow: 1px 1px 1px #000;
-	}
-}
-
-.hero {
-	@include one_col(false);
-	text-shadow: 1px 1px 1px #000;
-	padding-bottom: 4em;
-	h1 {
-		font-family: $open-sans;
-		font-size: 4em;
-		font-weight: 800;
-		color: $almost-white;
-	}
-	.hr {
-		width:20%;
-		height:3px;
-		background: $almost-white;
-		display: block;
-		margin:2em auto 1em;
-	}
-	p {
-		color: $almost-white;
-		font-size: 2em;
-		font-weight: 300;
 	}
 }
