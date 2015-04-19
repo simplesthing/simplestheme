@@ -19,14 +19,14 @@
     "lodash": "~3.7.0",
     "angular-bootstrap": "~0.12.1",
     "scales-utilities-clearfix": "~1.0.0",
-    "components-font-awesome": "~4.3.0",
-    "bootstrap-sass-official": "~3.3.4"
+    "bootstrap-sass-official": "~3.3.4",
+    "fontawesome": "~4.3.0",
+    "octicons": "~2.2.2"
   },
   "devDependencies": {
     "breakpoint-sass": "~2.5.0"
   },
   "overrides": {
-    
     "angular": {
       "main": []
     }

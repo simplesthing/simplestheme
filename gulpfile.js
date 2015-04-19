@@ -47,11 +47,6 @@ gulp.task('index', function(){
   ))
   .pipe(gulp.dest('./'));
 })
-// Font Awesome
-gulp.task('fontAwesome', function() {
-  return gulp.src(config.bowerDir + '/components-font-awesome/fonts/**.*')
-    .pipe(gulp.dest('./fonts'));
-});
 // Sass 
 gulp.task('sass', function() {
   gulp.src('./scss/{,*/}*.{scss,sass}')
@@ -71,7 +66,7 @@ gulp.task('watch', function() {
 
 // Gulp Default Task
 // ------------------------
-gulp.task('default', ['vendor-scripts','vendor-css','index','fontAwesome', 'sass', 'watch'], function () {
+gulp.task('default', ['vendor-scripts','vendor-css',  'index', 'sass', 'watch'], function () {
   
 });
 

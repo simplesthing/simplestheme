@@ -42,6 +42,11 @@ $almost-black-10: lighten($almost-black, 10%);
 $almost-black-33: lighten($almost-black, 33%);
 $almost-white: #fcfcfc;
 $brand-primary:         $almost-black !default;
+$hot_orange: #FF9119;
+$inferno: #ff3305;
+$hot_pink: #F714D9;
+
+$myshadow: 1px 1px 1px #000;
 // $brand-success:         #5cb85c !default;
 // $brand-warning:         #f0ad4e !default;
 // $brand-danger:          #d9534f !default;
@@ -57,7 +62,7 @@ $text-color:            $brand-primary !default;
 // // -------------------------
 
 $link-color:            $almost-black !default;
-$link-hover-color:      #F714D9 !default;
+$link-hover-color:       $inferno !default;
 
 // // Typography
 // // -------------------------

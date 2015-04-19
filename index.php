@@ -44,16 +44,18 @@
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav navbar-right">
-		        <li><a href="/category/web-development/">Archives</a></li>
+  		      	<li class="social-icon"><a href="//www.linkedin.com/in/simplesthing" target="_blank"><i class="fa fa-linkedin-square" target="_blank"></i></a></li>
+		      	<li class="social-icon"><a href="//twitter.com/simplesthing" target="_blank"><i class="fa fa-twitter-square" target="_blank"></i></a></li>
+		      	<li class="social-icon"><a href="//github.com/simplesthing" target="_blank"><i class="octicon octicon-mark-github"></i></a></li>
+		      	<li class="social-icon"><a href="//gist.github.com/simplesthing" target="_blank"><i class="octicon octicon-octoface"></i></a></li>
+		      	<li class="social-icon"><a href="//simplesthing.github.io/" target="_blank"><i class="octicon octicon-person"></i></a></li>
+		        <!-- <li><a href="/category/web-development/">Archives</a></li> -->
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav>
-
 		<div ui-view="hero"></div>
 	</header>
-	
-	
 
 	<main ui-view="main"></main>
 	

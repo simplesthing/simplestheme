@@ -1,0 +1,16 @@
+<section class="home">
+	<div class="row">
+		<div class="col">
+			<ul>
+				<li ng-repeat="post in home._posts track by $index">
+					<a ui-sref="post({slug:post.slug})"><h2>{{post.title}}</h2></a>
+					<em>{{post.date | prettyDate}}</em>
+					<!-- <p>subtitle if added to WP</p> -->
+				</li>
+			</ul>
+			<div ng-if="home.currentPage < home.pages" class="see-more">
+				<button class="btn btn-primary" ng-click="home.nextPage()">See More</button>
+			</div>
+		</div>
+	</div>
+</section>

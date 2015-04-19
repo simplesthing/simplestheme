@@ -1,16 +1,10 @@
-#simplestheme {
-	@extend .one-col;
-}
-
 ::-webkit-resizer {
 	// background: $link-hover-color;
 }
-
 em {
 	font-family: $lora;
 	color: $almost-black-10;
 }
-
 header {
 	resize:vertical;
 	overflow: auto;
@@ -33,4 +27,17 @@ header {
 		text-transform: uppercase;
 		text-shadow: 1px 1px 1px #000;
 	}
+	.nav > li > a {
+		padding-left: .3em;
+		padding-right:.3em;
+	}
+	.social-icon {
+		margin-top: -.25em;
+		font-size: 2em;
+		.octicon {
+			font-size: 1em;
+		}
+	}
 }
+
+
