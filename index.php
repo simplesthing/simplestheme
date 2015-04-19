@@ -19,55 +19,39 @@
   	<script src="wp-content/themes/simplestheme/vendor/ui-bootstrap-tpls.js"></script>
   	<script src="wp-content/themes/simplestheme/app/app.js"></script>
   	<script src="wp-content/themes/simplestheme/app/filters/strip-html-tags.js"></script>
-  	<script src="wp-content/themes/simplestheme/app/theme/nav/nav-controller.js"></script>
-  	<script src="wp-content/themes/simplestheme/app/theme/nav/nav-model.js"></script>
-  	<script src="wp-content/themes/simplestheme/app/module-template.js"></script>
+  	<script src="wp-content/themes/simplestheme/app/services/posts.js"></script>
+  	<script src="wp-content/themes/simplestheme/app/theme/home/home-controller.js"></script>
   	<!-- endinject -->
 </head>
-<body>
-	<div id="simplestheme">
-		<div class="row">
+<body >
+	<header>
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand logo" href="/"><?php bloginfo( 'name' ); ?></a>
+		    </div>
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="/category/web-development/">Archives</a></li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
 
-			<header>
-				<nav class="navbar navbar-default">
-				  <div class="container-fluid">
-				    <!-- Brand and toggle get grouped for better mobile display -->
-				    <div class="navbar-header">
-				      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-				        <span class="sr-only">Toggle navigation</span>
-				        <span class="icon-bar"></span>
-				        <span class="icon-bar"></span>
-				        <span class="icon-bar"></span>
-				      </button>
-				      <a class="navbar-brand logo" href="/">&nbsp;simplesthing</a>
-				    </div>
-				    <!-- Collect the nav links, forms, and other content for toggling -->
-				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				      <ul class="nav navbar-nav navbar-right">
-				        <li><a href="/category/web-development/">Archives</a></li>
-				      </ul>
-				    </div><!-- /.navbar-collapse -->
-				  </div><!-- /.container-fluid -->
-				</nav>
+		<div ui-view="hero"></div>
+	</header>
+	
+	
 
-				<div class="one-col">
-					<div class="row">
-						<div class="col center">
-							<h1>HOME</h1>
-						</div>
-					</div>
-				</div>
-
-			</header>
-
-			<div ui-view="main"></div>
-			
-			<aside ui-view="widget1"></aside>
-			
-			<footer>
-				<a href="<?php get_stylesheet_directory_uri() ?>/about">About</a>
-			</footer>
-		</div>
-	</div>
+	<main ui-view="main"></main>
+	
 </body>
 </html>

@@ -3,10 +3,14 @@
 }
 
 header {
+	background: $almost-black url('../images/hawk.jpg') no-repeat center center;
+	background-size: cover;
+
 	.logo {
 	  font-family: $sansita;
 	  font-size:2.25em;
 	  line-height: 18px;
+	  text-shadow: 1px 1px 1px #000;
 	  margin: .5em;
 	  a {
 	    text-decoration: none;
@@ -19,10 +23,30 @@ header {
 		font-weight: 800;
 		letter-spacing: .05em;
 		text-transform: uppercase;
+		text-shadow: 1px 1px 1px #000;
 	}
 }
 
-#hero {
-	background: $almost-black url('../images/wheremagic.jpg') no-repeat;
-	background-size: cover;
+.hero {
+	@include one_col(false);
+	 text-shadow: 1px 1px 1px #000;
+	h1 {
+		font-family: $open-sans;
+		font-size: 4em;
+		font-weight: 800;
+		color: $almost-white;
+	}
+	.hr {
+		width:20%;
+		height:3px;
+		background: $almost-white;
+		display: block;
+		margin:2em auto 1em;
+	}
+	p {
+		color: $almost-white;
+		font-size: 2em;
+		font-weight: 300;
+		margin: 0 0 4em;
+	}
 }

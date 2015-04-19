@@ -1,3 +1,0 @@
-(function (window, angular) {
-	 // body...
-})(window, window.angular); 

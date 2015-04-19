@@ -1,4 +1,4 @@
-(function () {
+(function (window, angular, undefined) {
 	'use strict'
 
 angular.module('simplestheme', [
@@ -15,7 +15,11 @@ angular.module('simplestheme', [
 				'main' : {
 					templateUrl: 'wp-content/themes/simplestheme/app/theme/home/index.html',
 					controller: 'HomeController',
-					controllerAs: 'model'
+					controllerAs: 'home'
+
+				},
+				'hero': {
+					templateUrl: 'wp-content/themes/simplestheme/app/theme/home/hero.html'
 				}
 			}
 		})
@@ -23,7 +27,7 @@ angular.module('simplestheme', [
 			url: '/:slug',
 			views: {
 				'main' : {
-					templateUrl: 'wp-content/themes/simplestheme/scripts/app/post/index.html',
+					templateUrl: 'wp-content/themes/simplestheme/app/theme/wpost/index.html',
 					controller: 'slug',
 					controllerAs: 'slug'
 				}
@@ -31,13 +35,6 @@ angular.module('simplestheme', [
 		});
 		// $locationProvider.html5Mode({enabled: true, requireBase: false});
 }])
-.controller('HomeController', function($scope, $http) {
-	console.log('home');
-	$scope.posts={};
-	$http.get('/api/get_posts').success(function(response){
-		$scope.posts = response.posts;
-	});
-})
 .controller('slug', [ '$scope', '$http', '$stateParams', '_',
 	function($scope, $http, $stateParams){
 		$http.get('/api/get_post/?slug='+ $stateParams.slug).success(function(response){
@@ -46,4 +43,4 @@ angular.module('simplestheme', [
 		});
 	}]
 );
-})(); 
+})(window, window.angular); 
