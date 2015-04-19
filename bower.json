@@ -26,9 +26,7 @@
     "breakpoint-sass": "~2.5.0"
   },
   "overrides": {
-    "bootstrap-sass-official": {
-      "main": []
-    },
+    
     "angular": {
       "main": []
     }

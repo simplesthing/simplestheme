@@ -38,7 +38,7 @@ gulp.task('vendor-css',  function() {
 gulp.task('index', function(){
   gulp.src('./index.php')
   .pipe(inject(
-    gulp.src([ './vendor/**/*.js', './app/**/*.js'], {read: false}), {
+    gulp.src([ './vendor/jquery.js','./vendor/**/*.js', './app/app.js','./app/**/*.js'], {read: false}), {
       transform: function (filepath) {
         return '<script src="wp-content/themes/simplestheme' + filepath +'"></script>';
         return inject.transform.apply(inject.transform, arguments);

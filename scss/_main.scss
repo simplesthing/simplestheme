@@ -1,10 +1,28 @@
-.logo {
-  font-family: $sansita;
-  font-size:2.25em;
-  line-height: 18px;
-  margin: 1em;
+#simplestheme {
+	@extend .one-col;
+}
 
-  a {
-    text-decoration: none;
-  }
+header {
+	.logo {
+	  font-family: $sansita;
+	  font-size:2.25em;
+	  line-height: 18px;
+	  margin: .5em;
+	  a {
+	    text-decoration: none;
+	  }
+	}	
+	.navbar-nav {
+		margin: 1em;
+		color: $almost-black;
+		font-size: 1.25em;
+		font-weight: 800;
+		letter-spacing: .05em;
+		text-transform: uppercase;
+	}
+}
+
+#hero {
+	background: $almost-black url('../images/wheremagic.jpg') no-repeat;
+	background-size: cover;
 }
