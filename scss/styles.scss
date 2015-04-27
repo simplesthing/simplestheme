@@ -1,4 +1,4 @@
-// This is the main source config for all styles to be added w/ @import 
+// This is the main source config for all styles to be added w/ @import
 
 @import "custom_variables";
 @import "bootstrap";
@@ -7,4 +7,5 @@
 @import "layouts";
 @import "../app/theme/hero/hero";
 @import "../app/theme/home/home";
+@import "../app/theme/post/post";
 @import "main";

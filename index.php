@@ -13,6 +13,8 @@
 	<script type="text/javascript">document.write('<script src="//localhost:35729/livereload.js?snipver=1" type="text/javascript"><\/script>')</script>
 	<!-- inject:js -->
   	<script src="wp-content/themes/simplestheme/vendor/jquery.js"></script>
+  	<script src="wp-content/themes/simplestheme/vendor/angular-animate.js"></script>
+  	<script src="wp-content/themes/simplestheme/vendor/angular-busy.js"></script>
   	<script src="wp-content/themes/simplestheme/vendor/angular-ui-router.js"></script>
   	<script src="wp-content/themes/simplestheme/vendor/bootstrap.js"></script>
   	<script src="wp-content/themes/simplestheme/vendor/lodash.js"></script>
@@ -20,8 +22,10 @@
   	<script src="wp-content/themes/simplestheme/app/app.js"></script>
   	<script src="wp-content/themes/simplestheme/app/filters/date.js"></script>
   	<script src="wp-content/themes/simplestheme/app/filters/strip-html-tags.js"></script>
+  	<script src="wp-content/themes/simplestheme/app/services/category.js"></script>
   	<script src="wp-content/themes/simplestheme/app/services/post.js"></script>
   	<script src="wp-content/themes/simplestheme/app/services/posts.js"></script>
+  	<script src="wp-content/themes/simplestheme/app/theme/category/category-controller.js"></script>
   	<script src="wp-content/themes/simplestheme/app/theme/home/home-controller.js"></script>
   	<script src="wp-content/themes/simplestheme/app/theme/post/post-controller.js"></script>
   	<script src="wp-content/themes/simplestheme/app/theme-controller.js"></script>
@@ -47,8 +51,8 @@
   		      	<li class="social-icon"><a href="//www.linkedin.com/in/simplesthing" target="_blank"><i class="fa fa-linkedin-square" target="_blank"></i></a></li>
 		      	<li class="social-icon"><a href="//twitter.com/simplesthing" target="_blank"><i class="fa fa-twitter-square" target="_blank"></i></a></li>
 		      	<li class="social-icon"><a href="//github.com/simplesthing" target="_blank"><i class="octicon octicon-mark-github"></i></a></li>
-		      	<li class="social-icon"><a href="//gist.github.com/simplesthing" target="_blank"><i class="octicon octicon-octoface"></i></a></li>
-		      	<li class="social-icon"><a href="//simplesthing.github.io/" target="_blank"><i class="octicon octicon-person"></i></a></li>
+		      	<!-- <li class="social-icon"><a href="//gist.github.com/simplesthing" target="_blank"><i class="octicon octicon-octoface"></i></a></li> -->
+		      	<!-- <li class="social-icon"><a href="//simplesthing.github.io/" target="_blank"><i class="octicon octicon-person"></i></a></li> -->
 		        <!-- <li><a href="/category/web-development/">Archives</a></li> -->
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
@@ -58,6 +62,6 @@
 	</header>
 
 	<main ui-view="main"></main>
-	
+
 </body>
 </html>

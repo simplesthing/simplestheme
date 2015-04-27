@@ -1,0 +1,11 @@
+.post {
+  @include one-col(false);
+  position: relative;
+  top: 2.5em;
+  p {
+    font-family: $lora;
+    font-size: 1.5em;
+    line-height: 2.1em;
+    color: $almost-black;
+  }
+}

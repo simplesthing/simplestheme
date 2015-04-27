@@ -9,4 +9,4 @@
 			}
 		}
 	})
-})(window, window.angular); 
+})(window, window.angular);

@@ -4,15 +4,17 @@
 angular.module('simplestheme', [
 	'ui.router',
 	'htmlFilters',
-	'dateFilters'
+	'dateFilters',
+  'cgBusy'
 ])
 .value('_', window.lodash)
 .config(['$stateProvider','$urlRouterProvider', '$locationProvider',
 	function($stateProvider, $urlRouterProvider, $locationProvider){
-	$urlRouterProvider.when('', '/#');
+	$urlRouterProvider.when('', '/home')
+	.otherwise('/home');
 	$stateProvider
 		.state('home', {
-			url: '/',
+			url: '/home',
 			views: {
 				'main' : {
 					templateUrl: 'wp-content/themes/simplestheme/app/theme/home/home.html',
@@ -41,7 +43,18 @@ angular.module('simplestheme', [
 					controllerAs: 'ctrl'
 				}
 			}
+		})
+		.state('category', {
+			url: '/:category',
+			views: {
+				main: {
+					templateUrl: 'wp-content/themes/simplestheme/app/theme/category/index.html',
+					controller: 'CategoryController',
+					controllerAs: 'cat'
+				}
+			}
 		});
+
 		// $locationProvider.html5Mode({enabled: true, requireBase: false});
 }])
-})(window, window.angular); 
+})(window, window.angular);

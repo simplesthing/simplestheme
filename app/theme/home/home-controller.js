@@ -1,33 +1,37 @@
 (function (window, angular, undefined) {
-	function HomeController ($log, $http, PostsModel) {
-		var model = this;
-		model._posts = [];
+  'use strict'
 
-		model.hero = {
-			head: 'Ava Collins',
-			tagline: 'The art behind this text is the work of Brazilian street artist L7M.'
-		};
+  function HomeController ($log, $http, PostsModel) {
+    var model = this;
 
-		model.nextPage = function(){
-			model.getPosts(model.currentPage + 1);
-		}
+    model._posts = [];
 
-		model.getPosts = function(page){
-			PostsModel.get(page).then(function(res){
-				angular.extend(model, res.data);
-				model._posts = _.union(model._posts, res.data.posts);
-				var query = parseInt(res.data.query.page);
-				model.currentPage = query > 0 ? query : 1;
-				console.log(model)
-			});
-		}
+    model.hero = {
+      head: 'Ava Collins',
+      tagline: 'The art behind this text is the work of Brazilian street artist L7M.'
+    };
 
-		model.getPosts();
+    model.nextPage = function(){
+      model.getPosts(model.currentPage + 1);
+    }
 
-		$log.debug('HomeController', model);
+    model.getPosts = function(page){
+      model.spinnerPromise = PostsModel.get(page).then(function(response){
+        angular.extend(model, response.data);
+        // merges existing posts list with more posts when retrieved
+        model._posts = _.union(model._posts, response.data.posts);
+        var page = parseInt(response.data.query.page);
+        model.currentPage = page > 0 ? page : 1;
+      });
+    }
 
-	};
+    model.getPosts();
 
-	angular.module('simplestheme')
-	.controller('HomeController', HomeController)
-})(window, window.angular); 
+    $log.debug('HomeController', model);
+
+  }
+
+  angular.module('simplestheme')
+  .controller('HomeController', HomeController);
+
+})(window, window.angular);
