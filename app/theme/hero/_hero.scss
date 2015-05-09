@@ -2,7 +2,7 @@
 .hero {
 	@include one_col(false);
 	text-shadow: 1px 1px 1px #000;
-	padding-bottom: 9em;
+	padding-bottom: 6em;
 	h1 {
 		font-family: $open-sans;
 		font-size: 4em;

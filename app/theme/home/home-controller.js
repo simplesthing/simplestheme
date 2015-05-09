@@ -6,10 +6,9 @@
 
     model._posts = [];
 
-    model.hero = {
-      head: 'Ava Collins',
-      tagline: 'The art behind this text is the work of Brazilian street artist L7M.'
-    };
+    // model.hero = {
+    //   head: 'Ava Collins'
+    // };
 
     model.nextPage = function(){
       model.getPosts(model.currentPage + 1);

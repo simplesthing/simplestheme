@@ -1,7 +1,10 @@
 <div class="post">
   <div class="row">
       <div class="col">
-        <p>{{single.post.content | striphtmltags | decodeHtmlCodes}}</p>
+        <h1 ng-bind-html="single.title"></h1>
+        <div class="credit"><em>by </em>Ava Collins<em> on {{single.data.post.date | prettyDate}}</em></div>
+        <p ng-bind-html="single.content"></p>
+        <!-- <p>{{single.post.content | striphtmltags | decodeHtmlCodes}}</p> -->
       </div>
     </div>
 </div>

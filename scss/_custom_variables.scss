@@ -7,6 +7,19 @@ $sansita: 'Sansita One', cursive;
 $open-sans:'Open Sans', sans-serif;
 $lora: 'Lora', serif;
 // //
+// // Margins
+// // --------------------------------------------------
+
+$margin-xs: 9px;
+$margin-small: 12px;
+$margin-default: 14px;
+$margin-md: 18px;
+$margin-lg: 24px;
+$margin-xl: 36px;
+$margin-2x: 48px;
+$margin-3x: 56px;
+$margin-4x: 64px;
+// //
 // // Mixins
 // // --------------------------------------------------
 
@@ -72,12 +85,12 @@ $font-family-serif:       'Georgia', "Times New Roman", Times, serif !default;
 // $font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace !default;
 $font-family-base:        $font-family-sans-serif !default;
 
-$font-size-base:          14px !default;
+$font-size-base:          12px !default;
 $font-size-large:         ceil($font-size-base * 1.25) !default; // ~18px
 $font-size-small:         ceil($font-size-base * 0.85) !default; // ~12px
 
-$font-size-h1:            floor($font-size-base * 2.6) !default; // ~36px
-$font-size-h2:            floor($font-size-base * 2.15) !default; // ~30px
+$font-size-h1:            floor($font-size-base * 3.5) !default; // ~42px
+$font-size-h2:            floor($font-size-base * 2.5) !default; // ~30px
 $font-size-h3:            ceil($font-size-base * 1.7) !default; // ~24px
 $font-size-h4:            ceil($font-size-base * 1.25) !default; // ~18px
 $font-size-h5:            $font-size-base !default;
@@ -87,7 +100,7 @@ $line-height-base:        1.428571429 !default; // 20/14
 $line-height-computed:    floor($font-size-base * $line-height-base) !default; // ~20px
 
 $headings-font-family:    $open-sans !default;
-$headings-font-weight:    500 !default;
+$headings-font-weight:    bold !default;
 $headings-line-height:    1.1 !default;
 $headings-color:          inherit !default;
 

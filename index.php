@@ -17,6 +17,7 @@
   	<script src="wp-content/themes/simplestheme/vendor/angular-busy.js"></script>
   	<script src="wp-content/themes/simplestheme/vendor/angular-ui-router.js"></script>
   	<script src="wp-content/themes/simplestheme/vendor/bootstrap.js"></script>
+  	<script src="wp-content/themes/simplestheme/vendor/flowtype.js"></script>
   	<script src="wp-content/themes/simplestheme/vendor/lodash.js"></script>
   	<script src="wp-content/themes/simplestheme/vendor/ui-bootstrap-tpls.js"></script>
   	<script src="wp-content/themes/simplestheme/app/app.js"></script>
@@ -30,7 +31,6 @@
   	<script src="wp-content/themes/simplestheme/app/theme/post/post-controller.js"></script>
   	<script src="wp-content/themes/simplestheme/app/theme-controller.js"></script>
   	<!-- endinject -->
-</head>
 <body ng-controller="AppController as theme">
 	<header ng-attr-style="{{theme.bgStyle}}">
 		<nav class="navbar navbar-default">
@@ -58,10 +58,10 @@
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav>
-		<div ui-view="hero"></div>
+		<div ui-view="hero" id="hero"></div>
 	</header>
 
-	<main ui-view="main"></main>
+	<main ui-view="main" id="main"></main>
 
 </body>
 </html>

@@ -1,7 +1,6 @@
 <section class="home">
 	<div class="row">
 		<div class="col" cg-busy="home.spinnerPromise">
-    {{home.spinnerPromise}}
 			<ul>
 				<li ng-repeat="post in home._posts track by $index">
 					<a ui-sref="post({slug:post.slug})"><h2>{{post.title}}</h2></a>
