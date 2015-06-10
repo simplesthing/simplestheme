@@ -8,6 +8,7 @@
 	<!-- possible font for abbyleu -->
 	<!-- <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'> -->
 	<link href='http://fonts.googleapis.com/css?family=Lora|Open+Sans:700,600,800,400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="wp-content/themes/simplestheme/bower_components/angular-busy/dist/angular-busy.min.css">
 	<?php wp_head(); ?>
 	<!-- TODO: add in devmode only gulp-->
 	<script type="text/javascript">document.write('<script src="//localhost:35729/livereload.js?snipver=1" type="text/javascript"><\/script>')</script>
@@ -26,9 +27,9 @@
   	<script src="wp-content/themes/simplestheme/app/services/category.js"></script>
   	<script src="wp-content/themes/simplestheme/app/services/post.js"></script>
   	<script src="wp-content/themes/simplestheme/app/services/posts.js"></script>
-  	<script src="wp-content/themes/simplestheme/app/theme/category/category-controller.js"></script>
-  	<script src="wp-content/themes/simplestheme/app/theme/home/home-controller.js"></script>
   	<script src="wp-content/themes/simplestheme/app/theme/post/post-controller.js"></script>
+  	<script src="wp-content/themes/simplestheme/app/theme/archive/archive-controller.js"></script>
+  	<script src="wp-content/themes/simplestheme/app/theme/home/home-controller.js"></script>
   	<script src="wp-content/themes/simplestheme/app/theme-controller.js"></script>
   	<!-- endinject -->
 <body ng-controller="AppController as theme">
@@ -47,8 +48,11 @@
 		    </div>
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
 		      <ul class="nav navbar-nav navbar-right">
-  		      	<li class="social-icon"><a href="//www.linkedin.com/in/simplesthing" target="_blank"><i class="fa fa-linkedin-square" target="_blank"></i></a></li>
+            <!-- <li><a href="">Portfolio</a></li> -->
+            <li><a ui-sref="archive">Archive</a></li>
+  		      <li class="social-icon"><a href="//www.linkedin.com/in/simplesthing" target="_blank"><i class="fa fa-linkedin-square" target="_blank"></i></a></li>
 		      	<li class="social-icon"><a href="//twitter.com/simplesthing" target="_blank"><i class="fa fa-twitter-square" target="_blank"></i></a></li>
 		      	<li class="social-icon"><a href="//github.com/simplesthing" target="_blank"><i class="octicon octicon-mark-github"></i></a></li>
 		      	<!-- <li class="social-icon"><a href="//gist.github.com/simplesthing" target="_blank"><i class="octicon octicon-octoface"></i></a></li> -->
@@ -58,7 +62,6 @@
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav>
-		<div ui-view="hero" id="hero"></div>
 	</header>
 
 	<main ui-view="main" id="main"></main>

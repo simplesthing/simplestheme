@@ -1,26 +1,19 @@
 (function (window, angular, undefined) {
   'use strict'
 
-  function HomeController ($log, $http, PostsModel) {
+  function HomeController ($log, $http, $sce, PostsModel) {
     var model = this;
 
     model._posts = [];
 
-    // model.hero = {
-    //   head: 'Ava Collins'
-    // };
-
-    model.nextPage = function(){
-      model.getPosts(model.currentPage + 1);
-    }
-
-    model.getPosts = function(page){
-      model.spinnerPromise = PostsModel.get(page).then(function(response){
+    model.getPosts = function(){
+      var config = {};
+      config.query = '?showposts=1';
+      model.spinnerPromise = PostsModel.get(config).then(function(response){
         angular.extend(model, response.data);
-        // merges existing posts list with more posts when retrieved
-        model._posts = _.union(model._posts, response.data.posts);
-        var page = parseInt(response.data.query.page);
-        model.currentPage = page > 0 ? page : 1;
+        model.data = response.data.posts[0];
+        model.title = $sce.trustAsHtml( response.data.posts[0].title_plain);
+        model.content = $sce.trustAsHtml(response.data.posts[0].content);
       });
     }
 
@@ -29,6 +22,8 @@
     $log.debug('HomeController', model);
 
   }
+
+  HomeController.$inject = ['$log', '$http', '$sce', 'PostsModel'];
 
   angular.module('simplestheme')
   .controller('HomeController', HomeController);

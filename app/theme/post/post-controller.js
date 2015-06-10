@@ -6,10 +6,9 @@
     model.hero = {};
 
 		model.getPost = function(slug){
-      PostModel.get(slug).then(function(response){
+      model.postPromise = PostModel.get(slug).then(function(response){
         angular.extend(model, response.data);
         model.data = response.data;
-        console.log(response.data.post.title_plain)
         model.title = $sce.trustAsHtml( response.data.post.title_plain);
         model.content = $sce.trustAsHtml(response.data.post.content);
       });

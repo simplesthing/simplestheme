@@ -21,39 +21,30 @@ angular.module('simplestheme', [
 					controller: 'HomeController',
 					controllerAs: 'home'
 
-				},
-				'hero': {
-					templateUrl: 'wp-content/themes/simplestheme/app/theme/hero/hero.html',
-					controller: 'HomeController',
-					controllerAs: 'ctrl'
 				}
 			}
 		})
+    .state('archive', {
+      url: '/archive',
+      views: {
+        main: {
+          templateUrl: 'wp-content/themes/simplestheme/app/theme/archive/index.html',
+          controller: 'ArchiveController',
+          controllerAs: 'arch'
+        }
+      }
+    })
 		.state('post', {
 			url: '/:slug',
 			views: {
 				'main' : {
 					templateUrl: 'wp-content/themes/simplestheme/app/theme/post/index.html',
 					controller: 'PostController',
-					controllerAs: 'single'
-				},
-				'hero': {
-					templateUrl: 'wp-content/themes/simplestheme/app/theme/hero/hero.html',
-					controller: 'PostController',
-					controllerAs: 'ctrl'
+					controllerAs: 'post'
 				}
 			}
 		})
-		.state('category', {
-			url: '/:category',
-			views: {
-				main: {
-					templateUrl: 'wp-content/themes/simplestheme/app/theme/category/index.html',
-					controller: 'CategoryController',
-					controllerAs: 'cat'
-				}
-			}
-		});
+		;
 
 		// $locationProvider.html5Mode({enabled: true, requireBase: false});
 }])

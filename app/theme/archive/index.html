@@ -1,0 +1,16 @@
+<section class="archive">
+  <div class="row">
+    <div class="col" cg-busy="arch.spinnerPromise">
+      <ul>
+        <li ng-repeat="post in arch._posts track by $index">
+          <a ui-sref="post({slug:post.slug})"><h2>{{post.title}}</h2></a>
+          <em>{{post.date | prettyDate}}</em>
+          <!-- <p>subtitle if added to WP</p> -->
+        </li>
+      </ul>
+      <div ng-if="arch.currentPage < arch.pages" class="see-more">
+        <button class="btn btn-primary" ng-click="arch.nextPage()">See More</button>
+      </div>
+    </div>
+  </div>
+</section>
