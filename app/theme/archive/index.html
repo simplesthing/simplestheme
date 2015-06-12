@@ -4,7 +4,7 @@
       <ul>
         <li ng-repeat="post in arch._posts track by $index">
           <a ui-sref="post({slug:post.slug})"><h2>{{post.title}}</h2></a>
-          <em>{{post.date | prettyDate}}</em>
+          <em ng-if="post.date">{{post.date | prettyDate}}</em>
           <!-- <p>subtitle if added to WP</p> -->
         </li>
       </ul>

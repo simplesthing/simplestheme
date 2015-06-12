@@ -14,6 +14,9 @@
         model.data = response.data.posts[0];
         model.title = $sce.trustAsHtml( response.data.posts[0].title_plain);
         model.content = $sce.trustAsHtml(response.data.posts[0].content);
+        console.log(response.data.posts[0].date)
+        model.date = response.data.posts[0].date;
+        model.ready = true;
       });
     }
 

@@ -14,7 +14,6 @@
       var config = {};
       config.query = 'cat=3&page=' + page;
 
-
       model.spinnerPromise = PostsModel.get(config).then(function(response){
         angular.extend(model, response.data);
         // merges existing posts list with more posts when retrieved

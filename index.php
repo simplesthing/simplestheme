@@ -10,8 +10,6 @@
 	<link href='http://fonts.googleapis.com/css?family=Lora|Open+Sans:700,600,800,400' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="wp-content/themes/simplestheme/bower_components/angular-busy/dist/angular-busy.min.css">
 	<?php wp_head(); ?>
-	<!-- TODO: add in devmode only gulp-->
-	<script type="text/javascript">document.write('<script src="//localhost:35729/livereload.js?snipver=1" type="text/javascript"><\/script>')</script>
 	<!-- inject:js -->
   	<script src="wp-content/themes/simplestheme/vendor/jquery.js"></script>
   	<script src="wp-content/themes/simplestheme/vendor/angular-animate.js"></script>

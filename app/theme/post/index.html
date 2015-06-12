@@ -2,7 +2,7 @@
   <div class="row">
       <div class="col">
         <h1 ng-bind-html="post.title"></h1>
-        <div class="credit"><em>by </em>Ava Collins<em> on {{post.data.post.date | prettyDate}}</em></div>
+        <div class="credit" ng-if="post.data.post.date"><em>by </em>Ava Collins<em> on {{post.data.post.date | prettyDate}}</em></div>
         <p ng-bind-html="post.content"></p>
         <!-- <p>{{post.post.content | striphtmltags | decodeHtmlCodes}}</p> -->
       </div>

@@ -11,6 +11,7 @@
         model.data = response.data;
         model.title = $sce.trustAsHtml( response.data.post.title_plain);
         model.content = $sce.trustAsHtml(response.data.post.content);
+        model.ready = true;
       });
     };
 

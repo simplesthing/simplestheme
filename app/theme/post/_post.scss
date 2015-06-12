@@ -3,6 +3,7 @@
   position: relative;
   top: 2.5em;
   max-width: 800px;
+  margin-bottom: 248px;
   .cg-busy {
     margin: 0;
     top: -30px;
@@ -18,8 +19,10 @@
   p {
     font-family: $font-family-serif;
     font-size: 1.3em;
-    line-height: 1.7em;
+    line-height: 2.1em;
+    letter-spacing: .005em;
     color: $almost-black;
+    margin-bottom: 28px;
   }
   a {
     color: $link-hover-color;
